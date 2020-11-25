@@ -1,0 +1,16 @@
+<!--List-->
+<div class="dataContainer">
+    <table>
+        <tr>
+            <th>Task</th>
+            <th>Priority</th>
+            <th>Status</th>
+        </tr>
+        <!-- to iterate-->
+        <tr *ngFor='let dat of data'>
+            <td>{{dat.task}}</td>
+            <td>{{dat.priority}}</td>
+            <td>{{dat.status}}</td>
+        </tr>
+    </table>
+</div>

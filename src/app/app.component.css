@@ -1,0 +1,97 @@
+/* CSS for home page*/
+.headerContainer{
+    background-color: burlywood;
+    text-align: center;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.25); 
+    padding: 3px;
+}
+h1{
+    color: darkslateblue; 
+}
+.inputSection{
+    width: 751px;
+    margin:0 auto ;
+    padding-top: 35px;
+}
+.input-todo{
+    width:250px;
+    height: 30px;
+    font-size: 17px;
+    border-radius: 10px;
+    padding-left: 15px;
+    outline: none;
+    margin-top: 15px;  
+}
+#message{
+    font-size: 16px;
+    color: gray;
+    font-weight: 500;
+}
+button{
+    margin: 10px;
+    padding: 6px 15px;
+    background-color:mediumseagreen;
+    color:white;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 100;
+    outline: none;
+}
+select{
+    margin: 10px;
+    padding: 6px 25px;
+    background-color:linen;
+    color:black;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 100;
+    outline: none;
+} 
+#selectStatus{
+    margin: 10px;
+    padding: 6px 25px;
+    background-color:cornsilk;
+    color:black;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 100;
+    outline: none;
+}
+.searchContainer{
+    background-color: beige;
+}
+table{
+    margin:15px;
+    margin-left:5%;
+    float:left;
+    width:38%;
+    border: 2px solid gray;
+    background-color:lavender;
+}
+th{
+    background-color: lightsalmon;
+    padding: 5px;
+}
+td{
+    background-color:wheat;
+    font-size: 20;
+    text-align: center;
+    font-weight: 500;  
+}
+.statusContainer{
+    margin:25px;
+    padding-left: 25px;
+}
+.routesContaniner{
+    padding-top: 15px;
+    border-top:3px solid gray;
+    height: 45px;
+    padding-left: 45px;
+    padding-bottom: 15px;
+    margin-left: 15px;
+    border-bottom:3px solid gray;
+    margin-top: 5px;
+}

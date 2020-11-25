@@ -1,0 +1,59 @@
+<!--TO-Do-List-->
+<!--Header Section-->
+<header>
+  <div class="headerContainer">
+    <h1>
+      {{title}}
+    </h1>
+  </div>
+</header>
+<!--Input section-->
+<div class="searchContainer">
+  <div class="inputSection">
+    <form [formGroup]="todoList">
+      <input type="text" #newTodo placeholder="- Add a todo -" class="input-todo" [formControl]="Task">
+      <!--For selecting priority -->
+      <select #prior [formControl]="Priority">
+        <option value="">Priority</option>
+        <option value="High">High</option>
+        <option value="Medium">Medium</option>
+        <option value="Low">Low</option>
+      </select>
+      <!--for add button-->
+      <button (click)='add(newTodo.value,prior.value)' [disabled]="todoList.invalid"> Add</button>
+      <div *ngIf="Task.errors?.required" id="message">This field is mandidatory</div>
+    </form>
+  </div>
+
+  <!-- for routes-->
+  <div class="routesContaniner">
+    <button [routerLink]="['status-types']" [queryParams]="{ order:'Completed'}">Completed</button>
+    <button [routerLink]="['status-types']" [queryParams]="{ order:'Progress'}">Progress</button>
+    <button [routerLink]="['status-types']" [queryParams]="{ order:'Pending'}">Pending</button>
+  </div>
+</div>
+<div class="clear"></div>
+<div class="dataContainer">
+  <table>
+    <tr>
+      <th>Task</th>
+      <th>Priority</th>
+      <th>Status</th>
+    </tr>
+    <!--To iterate-->
+    <tr *ngFor="let todo of todos; let i = index">
+      <td><b>{{todo.task}}</b></td>
+      <td>{{todo.priority}}</td>
+
+      <td> <select (change)="selectChangeStatus($event,i)">
+          <option value="">{{todo.status}}</option>
+          <option value="Completed">Completed</option>
+          <option value="Progress">Progress</option>
+          <option value="Pending">Pending</option>
+        </select>
+        {{todo.progress}}</td>
+    </tr>
+  </table>
+
+</div>
+<router-outlet></router-outlet>
